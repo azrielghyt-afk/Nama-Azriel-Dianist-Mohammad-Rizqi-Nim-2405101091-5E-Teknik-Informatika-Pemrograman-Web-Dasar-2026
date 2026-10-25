@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Belajar Membuat Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f2f2f2; }
+        form { max-width: 420px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 8px; }
+        h2 { text-align: center; }
+        .baris { margin-bottom: 14px; }
+        .baris > label:first-child { display: block; font-weight: bold; margin-bottom: 4px; }
+        input[type="text"], input[type="password"], select, textarea { width: 100%; padding: 6px; box-sizing: border-box; }
+        input[type="submit"] { width: 100%; padding: 10px; background: #2d7ff9; color: #fff; border: 0; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+<form action="formulir_rapi.html" method="get">
+    <h2>Form Pendaftaran</h2>
+
+    <div class="baris">
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" placeholder="Nama Kamu">
+    </div>
+
+    <div class="baris">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+    </div>
+
+    <div class="baris">
+        <label>Jenis Kelamin</label>
+        <input type="radio" id="lk" name="jenis_kelamin" value="laki-laki" checked>
+        <label for="lk">Laki-Laki</label>
+        <input type="radio" id="pr" name="jenis_kelamin" value="perempuan">
+        <label for="pr">Perempuan</label>
+    </div>
+
+    <div class="baris">
+        <label>Hobi</label>
+        <input type="checkbox" id="baca" name="hobi[]" value="membaca">
+        <label for="baca">Membaca Buku</label><br>
+        <input type="checkbox" id="nulis" name="hobi[]" value="menulis" checked>
+        <label for="nulis">Menulis</label><br>
+        <input type="checkbox" id="mancing" name="hobi[]" value="memancing">
+        <label for="mancing">Memancing</label>
+    </div>
+
+    <div class="baris">
+        <label for="kota">Asal Kota</label>
+        <select id="kota" name="asal_kota">
+            <option value="Kota Jakarta">Jakarta</option>
+            <option value="Kota Bandung">Bandung</option>
+            <option value="Kota Semarang" selected>Semarang</option>
+        </select>
+    </div>
+
+    <div class="baris">
+        <label for="komentar">Komentar Anda</label>
+        <textarea id="komentar" name="komentar" rows="5" placeholder="Silahkan katakan isi hati anda"></textarea>
+    </div>
+
+    <input type="submit" value="Mulai Proses!">
+</form>
+</body>
+</html>

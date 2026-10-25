@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Klinik Sehat</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #eef8f6; }
+        form { max-width: 460px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 8px; }
+        h2 { text-align: center; }
+        .baris { margin-bottom: 14px; }
+        .baris > label:first-child { display: block; font-weight: bold; margin-bottom: 4px; }
+        input[type="text"], input[type="number"], input[type="date"], select, textarea { width: 100%; padding: 6px; box-sizing: border-box; }
+        input[type="submit"] { width: 100%; padding: 10px; background: #0d9488; color: #fff; border: 0; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+<form action="Formulir_kliniksehat.html" method="post">
+    <h2>Pendaftaran Pasien<br>Klinik Sehat</h2>
+
+    <div class="baris">
+        <label for="nama">Nama Pasien</label>
+        <input type="text" id="nama" name="nama">
+    </div>
+
+    <div class="baris">
+        <label for="umur">Umur</label>
+        <input type="number" id="umur" name="umur" min="0" max="120">
+    </div>
+
+    <div class="baris">
+        <label>Jenis Kelamin</label>
+        <input type="radio" id="lk" name="jenis_kelamin" value="laki-laki" checked>
+        <label for="lk">Laki-Laki</label>
+        <input type="radio" id="pr" name="jenis_kelamin" value="perempuan">
+        <label for="pr">Perempuan</label>
+    </div>
+
+    <div class="baris">
+        <label for="poli">Poli Tujuan</label>
+        <select id="poli" name="poli">
+            <option value="umum">Poli Umum</option>
+            <option value="gigi">Poli Gigi</option>
+            <option value="anak">Poli Anak</option>
+            <option value="kandungan">Poli Kandungan</option>
+        </select>
+    </div>
+
+    <div class="baris">
+        <label for="tgl">Tanggal Kunjungan</label>
+        <input type="date" id="tgl" name="tanggal_kunjungan">
+    </div>
+
+    <div class="baris">
+        <label>Pembayaran</label>
+        <input type="radio" id="umum" name="pembayaran" value="umum" checked>
+        <label for="umum">Umum</label>
+        <input type="radio" id="bpjs" name="pembayaran" value="bpjs">
+        <label for="bpjs">BPJS</label>
+    </div>
+
+    <div class="baris">
+        <label for="keluhan">Keluhan</label>
+        <textarea id="keluhan" name="keluhan" rows="5"></textarea>
+    </div>
+
+    <div class="baris">
+        <input type="checkbox" id="setuju" name="setuju" value="ya">
+        <label for="setuju">Data yang saya isi sudah benar</label>
+    </div>
+
+    <input type="submit" value="Daftar">
+</form>
+</body>
+</html>
